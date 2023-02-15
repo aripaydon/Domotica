@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOMOTICACASA</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(230, 14, 86);
+            background-color: rgb(68, 236, 222);
+            font-family: Georgia;
+        }
+
+        h2 {
+            color: rgb(176, 45, 236);
+            font-family: Verdana;
+            text-align: center;
+            background-color: rgb(57, 206, 89);
+        }
+
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/002/184/680/non_2x/abstract-technology-background-free-vector.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #tabla1 {
+            width: 70%;
+            height: 70%;
+            background-position: inherit;
+            background-repeat: no-repeat;
+            background-size: 105% 105%;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+            border-radius: 25px;
+        }
+
+        td {
+            width: 20%;
+        }
+
+        #tabla2 {
+            width: 70%;
+            height: 70%;
+            background-image: url(https://i.postimg.cc/vTyfj2MV/primerpiso.png);
+            background-position: inherit;
+            background-repeat: no-repeat;
+            background-size: 105% 105%;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+            border-radius: 25px;
+        }
+
+        td {
+            width: 20%;
+        }
+
+        #tabla3 {
+            width: 70%;
+            height: 70%;
+            background-image: url(https://i.postimg.cc/7YsXGDwt/plantabaja.png);
+            background-position: inherit;
+            background-repeat: no-repeat;
+            background-size: 105% 105%;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+            border-radius: 25px;
+        }
+
+        #tabla4 {
+            width: 70%;
+            height: 70%;
+            background-position: inherit;
+            background-repeat: no-repeat;
+            background-size: 105% 105%;
+            box-shadow: 0 0 10px 5px rgba(28, 24, 231, 0.6);
+            border-radius: 25px;
+        }
+
+        h3 {
+            text-align: center;
+            color: rgb(241, 29, 213);
+            background-color: rgb(216, 232, 40);
+            font-family: Verdana;
+        }
+
+        td {
+            width: 20%
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Casa Domotica Con Raspberry</h1>
+    <hr><br>
+    <table aling="center" id="tabala4">
+        <tr>
+            <td aling="center">
+
+                <section id="date1"></section>
+                <section id="date2"></section>
+                <section id="date3"></section>
+                <section id="date4"></section>
+                <script>
+                    let d = new Date();
+
+                    let days = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+                    let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "junio", "Julio",
+                        "Agosto", "Septiembre", "Octubre", "Noviembre", "diciembre"];
+
+                    document.getElementById("date1").innerHTML = "<h3> Hoy es: " + days[d.getDay()] + "</h3>";
+                    document.getElementById("date2").innerHTML = "<h3> Mes actual: " + months[d.getMonth()] + "</h3>";
+                    document.getElementById("date3").innerHTML = "<h3> Año Actual: " + d.getFullYear() + "</h3>";
+                    document.getElementById("date4").innerHTML = "<h3> Tiempo Actual: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "</h3>";
+                </script>
+            </td>
+        </tr>
+
+    </table><br><br>
+
+    <table aling="center" id="tabla2">
+        <tr>
+            <td align="center">
+                <h2>Cuarto Principal</h2><button id="light"
+                    onclick="document.getElementById('myImage').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light2"
+                    onclick="document.getElementById('myImage').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+
+            <td align="center">
+                <h2>Baño</p>
+                </h2><button id="light3"
+                    onclick="document.getElementById('myImage2').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage2" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light4"
+                    onclick="document.getElementById('myImage2').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <h2>Recamara individual</p>
+                </h2><button id="light5"
+                    onclick="document.getElementById('myImage3').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage3" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light6"
+                    onclick="document.getElementById('myImage3').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+        </tr>
+    </table><br><br>
+    <table aling="center" id="tabla3">
+        <tr>
+            <td align="center">
+                <h2>Cocina</p>
+                </h2>
+                <h3></h3><button id="light7"
+                    onclick="document.getElementById('myImage4').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage4" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light8"
+                    onclick="document.getElementById('myImage4').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+            <td align="center">
+                <h2>Comedor</p>
+                </h2><button id="light9"
+                    onclick="document.getElementById('myImage5').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage5" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light10"
+                    onclick="document.getElementById('myImage5').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <h2>Sala</p>
+                </h2><button id="light11"
+                    onclick="document.getElementById('myImage6').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage6" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light12"
+                    onclick="document.getElementById('myImage6').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <h2>Garage</p>
+                </h2><button id="light13"
+                    onclick="document.getElementById('myImage7').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage7" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light14"
+                    onclick="document.getElementById('myImage7').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+            <td align="center">
+                <h2>Puerta Principal</p>
+                </h2><button id="light16"
+                    onclick="document.getElementById('myImage8').src='https://i.postimg.cc/C1s5T8J9/Encendido.png'">ENCENDER</button>
+                <br><img id="myImage8" src="https://i.postimg.cc/CxTNmTB5/Apagado.png" style="width: 110px"><br>
+                <button id="light16"
+                    onclick="document.getElementById('myImage8').src='https://i.postimg.cc/CxTNmTB5/Apagado.png'">APAGAR</button>
+            </td>
+        </tr>
+    </table><br><br><br>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        //Recamara Principal
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0000');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light2");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0001');
+            });
+        });
+        //Baño
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light3");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0010');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light4");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0011');
+            });
+        });
+        //Recamra individual
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light5");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0100');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light6");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0101');
+            });
+        });
+        //Cocina
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light7");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0110');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light8");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '0111');
+            });
+        });
+        //Comedor
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light9");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1000');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light10");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1001');
+            });
+        });
+        //Sala
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light11");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1010');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light12");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1011');
+            });
+        });
+        //Garage
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light13");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1100');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light14");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1101');
+            });
+        });
+        //Puerta Pricipal
+        var socket = io();
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light15");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1100');
+            });
+        });
+        window.addEventListener("load", function () {
+            var btn = document.getElementById("light16");
+            btn.addEventListener("click", function () {
+                socket.emit("domo", '1101');
+            });
+        });
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="camaraw.css">
+    <title>CamaraWeb</title>
+    </head>
+
+    <body>
+        <h1>Camara De Seguridad</h1>
+        <hr><br>
+        <div class="display-cover">
+            <video autoplay></video>
+            <canvas class="d-none"></canvas>
+
+            <div class="video-options">
+                <select name="" id="" class="custom-select">
+                    <option value="">Select camera</option>
+                </select>
+            </div>
+
+
+
+            <div class="controls">
+                <button class="btn btn-danger play" title="Play"><i data-feather="play-circle"></i></button>
+                <button class="btn btn-info pause d-none" title="Pause"><i data-feather="pause"></i></button>
+
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="camara.js"></script>
+    </body>
+
+</html>
